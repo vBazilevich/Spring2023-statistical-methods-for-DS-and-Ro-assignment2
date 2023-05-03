@@ -1,0 +1,60 @@
+\documentclass{article}
+
+\usepackage[a4paper, total={16cm, 26cm}]{geometry}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\graphicspath{{../images/}}
+\usepackage{float}
+
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\title{Statistical techniques for DS and Ro. Assignment 2. Task 2}
+\author{Vladimir Bazilevich, v.bazilevich@innopolis.university}
+
+\setcounter{section}{0}
+
+\begin{document}
+	\maketitle
+	
+	\href{https://github.com/vBazilevich/Spring2023-statistical-methods-for-DS-and-Ro-assignment2}{Assignment 2 repository}.
+	
+	\href{https://github.com/vBazilevich/Spring2023-statistical-methods-for-DS-and-Ro-assignment2/tree/master/task2}{Task 2 folder}.
+	
+	\section{Effect of different schedules}
+	For my experiments I have decided to update the temperature every 5 trials. I have selected different decay rates: $[0.3, 0.9, 0.99. 0.999]$
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.8]{sa\_td0.3\_ur5}
+		\caption{Simulated annealing with temperature decay rate $\alpha=0.3$}
+		\centering
+	\end{figure}
+
+	\begin{figure}[H]
+		\includegraphics[scale=0.8]{sa\_td0.9\_ur5}
+		\caption{Simulated annealing with temperature decay rate $\alpha=0.9$}
+		\centering
+	\end{figure}
+
+	\begin{figure}[H]
+		\includegraphics[scale=0.8]{sa\_td0.99\_ur5}
+		\caption{Simulated annealing with temperature decay rate $\alpha=0.99$}
+		\centering
+	\end{figure}
+
+	\begin{figure}[H]
+		\includegraphics[scale=0.8]{sa\_td0.999\_ur5}
+		\caption{Simulated annealing with temperature decay rate $\alpha=0.999$}
+		\centering
+	\end{figure}
+
+	We can observe several effects from pictures above:
+	\begin{enumerate}
+		\item Cool down time increases as decay rate increases
+		\item High decay rates tend to produce better final results
+		\item Exploration intensity decreases over time
+	\end{enumerate}
+
+	Those trends also appeared after multiple restarts.
+\end{document}
